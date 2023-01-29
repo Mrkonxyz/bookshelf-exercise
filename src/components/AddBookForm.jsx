@@ -18,8 +18,8 @@ const AddBookForm = ({ addBook }) => {
       >
         <div>
           <label>Title </label>
-          <input onChange={onHandlechang} />
-          <button type="submit">add</button>
+          <input value={title} onChange={onHandlechang} />
+         
           <br />
           {title}
         </div>
