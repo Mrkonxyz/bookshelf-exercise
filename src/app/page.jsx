@@ -12,12 +12,13 @@ const HomePage = () => {
   return (
     <div>
       <AddBookForm addBook={(v) => {
-        setBooks((bookss) => [...bookss, {title:v}])
-
-        
+        setBooks((abc) => [...abc, {title:v}])        
       }}/>
       <hr />
-      <BookList books={books} />
+      <BookList books={books} removeBook={(v) => {
+        setBooks((current) => current.filter((fruit) => fruit != v)) 
+       
+      }}/>
     </div>
   );
 };
